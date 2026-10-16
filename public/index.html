@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vô e Vó · Cardápio</title>
+  <meta name="description" content="Cardápio do Vô e Vó Café & Tapiocaria: cuscuz, tapiocas, lanches, pratos da noite, cafés e bebidas.">
+  <meta name="theme-color" content="#3f5244">
+  <link rel="icon" href="/img/icon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Marcellus&display=swap">
+  <link rel="stylesheet" href="/css/menu.css">
+</head>
+<body>
+  <a class="skip" href="#menu">Pular para o cardápio</a>
+
+  <header class="hero">
+    <!-- O logo já traz o nome; o texto fica só para leitores de tela e buscadores. -->
+    <img class="hero__logo" src="/img/logo.png" alt="" width="600" height="635" fetchpriority="high">
+    <h1 class="visually-hidden"><span id="brand-name">Vô e Vó</span> <span id="brand-subtitle">Café &amp; Tapiocaria</span></h1>
+    <p class="hero__tagline" id="brand-tagline"></p>
+  </header>
+
+  <nav class="tabs" aria-label="Categorias do cardápio">
+    <div class="tabs__track" id="tabs"></div>
+  </nav>
+
+  <div class="wrap">
+    <div id="today"></div>
+    <div class="search">
+      <label class="visually-hidden" for="search">Buscar no cardápio</label>
+      <input id="search" type="search" placeholder="Buscar no cardápio…" autocomplete="off" enterkeyhint="search">
+    </div>
+    <main id="menu" class="menu">
+      <p class="status">Carregando cardápio…</p>
+    </main>
+    <p class="status" id="empty" hidden>Nenhum item encontrado.</p>
+  </div>
+
+  <footer class="footer" id="footer"></footer>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Voltar ao topo" hidden>↑</button>
+
+  <dialog class="sheet" id="item-sheet" aria-labelledby="sheet-title">
+    <button class="sheet__close" id="sheet-close" type="button" aria-label="Fechar">✕</button>
+    <img class="sheet__img" id="sheet-img" alt="" width="400" height="300">
+    <div class="sheet__body">
+      <p class="sheet__kicker" id="sheet-kicker"></p>
+      <h2 class="sheet__title" id="sheet-title"></h2>
+      <div class="badges" id="sheet-badges"></div>
+      <p class="sheet__desc" id="sheet-desc"></p>
+      <p class="sheet__price" id="sheet-price"></p>
+    </div>
+  </dialog>
+
+  <script src="/js/menu.js" defer></script>
+</body>
+</html>

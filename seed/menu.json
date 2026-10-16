@@ -1,0 +1,1083 @@
+{
+  "info": {
+    "name": "Vô e Vó",
+    "subtitle": "Café & Tapiocaria",
+    "tagline": "Sabor com afeto e aquele gostinho de casa de vó.",
+    "footer": "Feito com ingredientes selecionados e muito carinho para você.",
+    "hours": "",
+    "address": "",
+    "whatsapp": "",
+    "instagram": ""
+  },
+  "categories": [
+    {
+      "id": "cuscuzeria",
+      "name": "Cuscuzeria do Vô",
+      "description": "Tradição, sabor e aquele gostinho de casa de vô.",
+      "note": "",
+      "sections": [
+        {
+          "id": "cuscuz-especial",
+          "name": "Especial da Casa",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "cuscuz-segredo-da-vo",
+              "name": "Cuscuz Segredo da Vó",
+              "description": "Cuscuz de macaxeira com carne desfiada, bacon crocante, raspa de queijo coalho e toque especial da casa.",
+              "price": 25,
+              "badge": "O mais pedido",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            }
+          ]
+        },
+        {
+          "id": "cuscuz-tradicionais",
+          "name": "Tradicionais",
+          "note": "Massa de milho ou arroz. A escolha da massa é por conta da casa — consulte disponibilidade.",
+          "weekday": null,
+          "items": [
+            {
+              "id": "cuscuz-ovos",
+              "name": "Cuscuz com Ovos Mexidos da Vó",
+              "description": "",
+              "price": 10,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            },
+            {
+              "id": "cuscuz-carne-de-sol",
+              "name": "Cuscuz de Carne de Sol do Vô",
+              "description": "",
+              "price": 15,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            },
+            {
+              "id": "cuscuz-frango",
+              "name": "Cuscuz de Frango Desfiado da Vó",
+              "description": "",
+              "price": 13,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            },
+            {
+              "id": "cuscuz-calabresa",
+              "name": "Cuscuz de Calabresa do Vô",
+              "description": "",
+              "price": 13,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            },
+            {
+              "id": "cuscuz-queijo-banana",
+              "name": "Cuscuz com Queijo Coalho e Banana",
+              "description": "Queijo coalho dourado, banana caramelizada e melaço.",
+              "price": 16,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            }
+          ]
+        },
+        {
+          "id": "cuscuz-adicionais",
+          "name": "Adicionais",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "cuscuz-add-queijo",
+              "name": "Queijo extra",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cuscuz-add-frango",
+              "name": "Frango extra",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cuscuz-add-carne-de-sol",
+              "name": "Carne de sol extra",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cuscuz-add-ovo",
+              "name": "Ovo extra",
+              "description": "",
+              "price": 2.5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cuscuz-add-requeijao",
+              "name": "Requeijão extra",
+              "description": "",
+              "price": 3,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cuscuz-add-calabresa",
+              "name": "Calabresa extra",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cuscuz-add-bacon",
+              "name": "Bacon extra",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tapiocas",
+      "name": "Tapiocas",
+      "description": "Feitas com tapioca de qualidade e recheios que abraçam.",
+      "note": "",
+      "sections": [
+        {
+          "id": "tapiocas-salgadas",
+          "name": "Salgadas",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "tapioca-carne-de-sol",
+              "name": "Tapioca de Carne de Sol do Vô",
+              "description": "Carne de sol desfiada, bacon crocante, cheiro-verde e requeijão cremoso.",
+              "price": 19,
+              "badge": "Mais pedida",
+              "available": true,
+              "image": "/img/pratos/tapioca.svg"
+            },
+            {
+              "id": "tapioca-frango",
+              "name": "Tapioca de Frango Desfiado Cremoso da Vó",
+              "description": "",
+              "price": 16,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/tapioca.svg"
+            },
+            {
+              "id": "tapioca-banana-mucarela",
+              "name": "Tapioca de Banana Caramelizada e Muçarela",
+              "description": "Recheada com banana caramelizada e queijo muçarela.",
+              "price": 15,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/tapioca.svg"
+            }
+          ]
+        },
+        {
+          "id": "tapiocas-doces",
+          "name": "Doces",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "tapioca-nutella",
+              "name": "Tapioca de Nutella da Vó",
+              "description": "",
+              "price": 17,
+              "badge": "Favorita da casa",
+              "available": true,
+              "image": "/img/pratos/tapioca.svg"
+            },
+            {
+              "id": "tapioca-coco",
+              "name": "Tapioca de Coco do Vô",
+              "description": "",
+              "price": 15,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/tapioca.svg"
+            }
+          ]
+        },
+        {
+          "id": "tapiocas-adicionais",
+          "name": "Adicionais (salgadas)",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "tapioca-add-queijo",
+              "name": "Queijo extra",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "tapioca-add-frango",
+              "name": "Frango extra",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "tapioca-add-carne-de-sol",
+              "name": "Carne de sol extra",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "tapioca-add-ovo",
+              "name": "Ovo extra",
+              "description": "",
+              "price": 2.5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "tapioca-add-requeijao",
+              "name": "Requeijão extra",
+              "description": "",
+              "price": 3,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "tapioca-add-calabresa",
+              "name": "Calabresa extra",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "tapioca-add-bacon",
+              "name": "Bacon extra",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lanches",
+      "name": "Lanches da Vó",
+      "description": "",
+      "note": "",
+      "sections": [
+        {
+          "id": "crepiocas-omeletes",
+          "name": "Crepiocas & Omeletes",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "crepioca-frango",
+              "name": "Crepioca de Frango Desfiado da Vó",
+              "description": "Frango desfiado, requeijão, cenoura e muçarela.",
+              "price": 19,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/crepioca.svg"
+            },
+            {
+              "id": "crepioca-carne-de-sol",
+              "name": "Crepioca de Carne de Sol Desfiada",
+              "description": "Carne desfiada, requeijão, milho e muçarela.",
+              "price": 21,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/crepioca.svg"
+            },
+            {
+              "id": "omelete-frango",
+              "name": "Omelete Cremoso de Frango",
+              "description": "Ovos frescos com frango temperado, muçarela, milho verde e cheiro-verde. Leve, cremoso e muito saboroso.",
+              "price": 15,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/crepioca.svg"
+            }
+          ]
+        },
+        {
+          "id": "lanches-da-vo",
+          "name": "Lanches",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "croque-vo-vo",
+              "name": "Croque do Vô & Vó",
+              "description": "Brioche, molho bechamel, peito de peru e muçarela gratinada.",
+              "price": 24,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            },
+            {
+              "id": "pao-nurado",
+              "name": "Pão Nurado da Vovó",
+              "description": "Pão francês recheado com carne moída e muçarela.",
+              "price": 16,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            },
+            {
+              "id": "waffle-doce-abraco",
+              "name": "Waffle Doce Abraço",
+              "description": "Nutella ou doce de leite com morangos.",
+              "price": 13,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/doce.svg"
+            },
+            {
+              "id": "croque-sabor-da-roca",
+              "name": "Croque Sabor da Roça",
+              "description": "Carne de sol com molho especial da casa.",
+              "price": 26,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            }
+          ]
+        },
+        {
+          "id": "sobremesas",
+          "name": "Sobremesas",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "brownie-supremo",
+              "name": "Brownie Supremo",
+              "description": "Com sorvete de creme e calda de chocolate, morango ou Nutella.",
+              "price": 22,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/doce.svg"
+            },
+            {
+              "id": "fatia-bolo-noite",
+              "name": "Fatia de Bolo da Noite",
+              "description": "",
+              "price": 20,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/doce.svg"
+            }
+          ]
+        },
+        {
+          "id": "novidades",
+          "name": "Novidades",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "croissant-queijo-presunto",
+              "name": "Croissant de Queijo e Presunto",
+              "description": "Croissant artesanal recheado com queijo e presunto.",
+              "price": 12,
+              "badge": "Novidade",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            },
+            {
+              "id": "croissant-frango-requeijao",
+              "name": "Croissant de Frango com Requeijão",
+              "description": "Croissant artesanal recheado com frango desfiado e requeijão cremoso.",
+              "price": 13,
+              "badge": "Novidade",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            },
+            {
+              "id": "croissant-carne-de-sol",
+              "name": "Croissant de Carne de Sol",
+              "description": "Croissant artesanal recheado com carne de sol desfiada e requeijão cremoso.",
+              "price": 15,
+              "badge": "Novidade",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pratos-da-noite",
+      "name": "Pratos da Noite",
+      "description": "Sabor caseiro para noites especiais.",
+      "note": "",
+      "sections": [
+        {
+          "id": "pratos",
+          "name": "Pratos",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "arrumadinho",
+              "name": "Arrumadinho Raiz do Vô",
+              "description": "Carne de sol, arroz Maria Isabel, creme de galinha, farofa e vinagrete.",
+              "price": 30,
+              "badge": "Destaque",
+              "available": true,
+              "image": "/img/pratos/prato.svg"
+            },
+            {
+              "id": "talharim-branco-file",
+              "name": "Talharim ao Molho Branco e Filé",
+              "description": "Talharim ao molho branco cremoso com filé selado.",
+              "price": 30,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/prato.svg"
+            },
+            {
+              "id": "talharim-bolonhesa",
+              "name": "Talharim à Bolonhesa",
+              "description": "Talharim ao molho de carne moída com tempero caseiro e toque especial.",
+              "price": 30,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/prato.svg"
+            },
+            {
+              "id": "talharim-camarao",
+              "name": "Talharim de Camarão",
+              "description": "Talharim ao molho cremoso com camarões selecionados e temperos especiais.",
+              "price": 35,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/prato.svg"
+            }
+          ]
+        },
+        {
+          "id": "caldos",
+          "name": "Caldos",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "caldo-reconforto",
+              "name": "Caldo Reconforto da Vó",
+              "description": "Caldo de ovo acompanhado de pão francês e torradas.",
+              "price": 14,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/caldo.svg"
+            },
+            {
+              "id": "caldinho-feijao",
+              "name": "Caldinho de Feijão com Bacon Crocante",
+              "description": "",
+              "price": 8,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/caldo.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafes-chocolates",
+      "name": "Cafés & Chocolates",
+      "description": "",
+      "note": "",
+      "sections": [
+        {
+          "id": "cafes-da-casa",
+          "name": "Cafés da Casa",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "cafe-expresso",
+              "name": "Café Expresso",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cafe.svg"
+            },
+            {
+              "id": "cafe-com-leite",
+              "name": "Café com Leite",
+              "description": "",
+              "price": 8,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cafe.svg"
+            },
+            {
+              "id": "cappuccino-classico",
+              "name": "Cappuccino Clássico",
+              "description": "",
+              "price": 13,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cafe.svg"
+            },
+            {
+              "id": "cappuccino-doce-de-leite",
+              "name": "Cappuccino Doce de Leite",
+              "description": "",
+              "price": 16,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cafe.svg"
+            }
+          ]
+        },
+        {
+          "id": "chocolates-especiais",
+          "name": "Chocolates & Especiais",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "cappuccino-vienense",
+              "name": "Cappuccino Vienense",
+              "description": "",
+              "price": 18,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cafe.svg"
+            },
+            {
+              "id": "cappuccino-nutella",
+              "name": "Cappuccino Nutella",
+              "description": "",
+              "price": 18,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cafe.svg"
+            },
+            {
+              "id": "mocaccino",
+              "name": "Mocaccino",
+              "description": "",
+              "price": 14,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cafe.svg"
+            },
+            {
+              "id": "chocolate-quente-gourmet",
+              "name": "Chocolate Quente Cremoso Gourmet",
+              "description": "",
+              "price": 18,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/chocolate.svg"
+            },
+            {
+              "id": "chocolate-quente-premium",
+              "name": "Chocolate Quente Expresso Premium",
+              "description": "",
+              "price": 15,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/chocolate.svg"
+            },
+            {
+              "id": "chocolate-gelado",
+              "name": "Chocolate Gelado",
+              "description": "",
+              "price": 15,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/chocolate.svg"
+            }
+          ]
+        },
+        {
+          "id": "cafes-adicionais",
+          "name": "Adicionais",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "cafe-add-doce-de-leite",
+              "name": "Doce de leite",
+              "description": "",
+              "price": 6,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cafe-add-chantilly",
+              "name": "Chantilly",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cafe-add-nutella",
+              "name": "Nutella",
+              "description": "",
+              "price": 6,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cafe-add-leite",
+              "name": "Leite",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            },
+            {
+              "id": "cafe-add-leite-zero",
+              "name": "Leite zero lactose",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "name": "Bebidas",
+      "description": "",
+      "note": "",
+      "sections": [
+        {
+          "id": "sucos",
+          "name": "Sucos Naturais (polpa)",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "suco-acerola",
+              "name": "Acerola",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/suco.svg"
+            },
+            {
+              "id": "suco-caja",
+              "name": "Cajá",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/suco.svg"
+            },
+            {
+              "id": "suco-caju",
+              "name": "Caju",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/suco.svg"
+            },
+            {
+              "id": "suco-goiaba",
+              "name": "Goiaba",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/suco.svg"
+            },
+            {
+              "id": "suco-maracuja",
+              "name": "Maracujá",
+              "description": "",
+              "price": 10,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/suco.svg"
+            },
+            {
+              "id": "cajuina",
+              "name": "Cajuína",
+              "description": "",
+              "price": 11,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/suco.svg"
+            }
+          ]
+        },
+        {
+          "id": "refrigerantes",
+          "name": "Refrigerantes",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "coca-cola",
+              "name": "Coca-Cola",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            },
+            {
+              "id": "coca-cola-zero",
+              "name": "Coca-Cola Zero",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            },
+            {
+              "id": "pepsi",
+              "name": "Pepsi",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            },
+            {
+              "id": "sprite",
+              "name": "Sprite",
+              "description": "",
+              "price": 6,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            },
+            {
+              "id": "fanta",
+              "name": "Fanta",
+              "description": "",
+              "price": 6,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            },
+            {
+              "id": "kuat",
+              "name": "Kuat",
+              "description": "",
+              "price": 6,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            },
+            {
+              "id": "schweppes-citrus",
+              "name": "Schweppes Citrus",
+              "description": "",
+              "price": 7,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            },
+            {
+              "id": "h2oh",
+              "name": "H2OH!",
+              "description": "",
+              "price": 8,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            }
+          ]
+        },
+        {
+          "id": "aguas",
+          "name": "Águas",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "agua-mineral",
+              "name": "Água Mineral",
+              "description": "",
+              "price": 4,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/garrafa.svg"
+            },
+            {
+              "id": "agua-com-gas",
+              "name": "Água Mineral com Gás",
+              "description": "",
+              "price": 5,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/garrafa.svg"
+            }
+          ]
+        },
+        {
+          "id": "energeticos",
+          "name": "Energéticos",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "red-bull",
+              "name": "Red Bull",
+              "description": "",
+              "price": 15,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            },
+            {
+              "id": "red-bull-zero",
+              "name": "Red Bull Zero",
+              "description": "",
+              "price": 15,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/lata.svg"
+            }
+          ]
+        },
+        {
+          "id": "cervejas",
+          "name": "Cervejas Especiais",
+          "note": "",
+          "weekday": null,
+          "items": [
+            {
+              "id": "heineken",
+              "name": "Heineken (330ml)",
+              "description": "",
+              "price": 11,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/garrafa.svg"
+            },
+            {
+              "id": "corona-extra",
+              "name": "Corona Extra (330ml)",
+              "description": "",
+              "price": 11,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/garrafa.svg"
+            },
+            {
+              "id": "corona-zero",
+              "name": "Corona Zero Álcool (330ml)",
+              "description": "",
+              "price": 11,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/garrafa.svg"
+            },
+            {
+              "id": "stella-artois",
+              "name": "Stella Artois (330ml)",
+              "description": "",
+              "price": 11,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/garrafa.svg"
+            },
+            {
+              "id": "stella-pure-gold",
+              "name": "Stella Pure Gold (330ml)",
+              "description": "",
+              "price": 11,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/garrafa.svg"
+            },
+            {
+              "id": "skol-beats-sense",
+              "name": "Skol Beats Sense (269ml)",
+              "description": "",
+              "price": 14,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/garrafa.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combos",
+      "name": "Combos Promocionais",
+      "description": "Promoções especiais do Vô & Vó.",
+      "note": "Válidos somente de terça a quinta, das 17h às 22h.",
+      "sections": [
+        {
+          "id": "terca-do-cafe",
+          "name": "Terça do Café",
+          "note": "",
+          "weekday": 2,
+          "items": [
+            {
+              "id": "combo-croissant-expresso",
+              "name": "Croissant + Expresso",
+              "description": "",
+              "price": 21.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            },
+            {
+              "id": "combo-misto-expresso",
+              "name": "Misto Quente + Expresso",
+              "description": "",
+              "price": 14.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            },
+            {
+              "id": "combo-cappuccino-misto",
+              "name": "Cappuccino Doce de Leite + Misto Quente",
+              "description": "",
+              "price": 21.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/croissant.svg"
+            }
+          ]
+        },
+        {
+          "id": "quarta-do-cuscuz",
+          "name": "Quarta do Cuscuz",
+          "note": "",
+          "weekday": 3,
+          "items": [
+            {
+              "id": "combo-cuscuz-frango",
+              "name": "Cuscuz de Frango Desfiado + Expresso",
+              "description": "",
+              "price": 17.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            },
+            {
+              "id": "combo-cuscuz-calabresa",
+              "name": "Cuscuz de Calabresa + Expresso",
+              "description": "",
+              "price": 17.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            },
+            {
+              "id": "combo-cuscuz-carne-de-sol",
+              "name": "Cuscuz de Carne de Sol + Expresso",
+              "description": "",
+              "price": 19.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            },
+            {
+              "id": "combo-cuscuz-ovos",
+              "name": "Cuscuz com Ovos Mexidos",
+              "description": "",
+              "price": 15.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/cuscuz.svg"
+            }
+          ]
+        },
+        {
+          "id": "quinta-da-tapioca",
+          "name": "Quinta da Tapioca",
+          "note": "",
+          "weekday": 4,
+          "items": [
+            {
+              "id": "combo-tapioca-frango",
+              "name": "Tapioca de Frango + Expresso",
+              "description": "",
+              "price": 19.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/tapioca.svg"
+            },
+            {
+              "id": "combo-tapioca-carne-de-sol",
+              "name": "Tapioca de Carne de Sol + Expresso",
+              "description": "",
+              "price": 22.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/tapioca.svg"
+            },
+            {
+              "id": "combo-2-tapiocas",
+              "name": "2 Tapiocas de Frango + 2 Expressos",
+              "description": "",
+              "price": 36.9,
+              "badge": "",
+              "available": true,
+              "image": "/img/pratos/tapioca.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-10-16T00:00:00.000Z"
+}

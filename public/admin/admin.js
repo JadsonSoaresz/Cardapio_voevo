@@ -570,7 +570,15 @@
   });
 
   api('/api/session')
-    .then(({ authenticated }) => (authenticated ? startApp() : showLogin()))
+    .then(({ authenticated, passwordRequired }) => {
+      if (passwordRequired === false) {
+        // Modo de teste no servidor: sem login, então "Sair" e a troca de senha não fazem sentido.
+        $('#logout').hidden = true;
+        $('.panel-tab[data-panel="panel-password"]').hidden = true;
+        $('#no-password-warning').hidden = false;
+      }
+      return authenticated ? startApp() : showLogin();
+    })
     .catch((err) => {
       showLogin();
       toast(err.message, 'error');

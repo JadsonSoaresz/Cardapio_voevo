@@ -109,6 +109,16 @@ select.input { padding-right: 8px; }
 .input:focus { outline: none; border-color: var(--green); background: #fff; box-shadow: 0 0 0 3px rgba(63, 82, 68, 0.15); }
 .input.is-invalid { border-color: var(--danger); box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.12); }
 
+.warning {
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border: 1px solid #f0c27a;
+  border-radius: 9px;
+  background: #fff6e5;
+  color: #7a4a0c;
+  font-size: 0.88rem;
+}
+
 .form-error {
   margin: 0;
   padding: 10px 12px;

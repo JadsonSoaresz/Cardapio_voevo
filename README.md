@@ -26,7 +26,10 @@ Também dá para trocar pelo painel, na aba **Senha**.
 
 | Caminho | O que é |
 |---|---|
-| `server.js` | Servidor HTTP: entrega as páginas e a API (`/api/menu`, login, senha) |
+| `lib/app.js` | Rotas da API (`/api/menu`, login, senha, envio de fotos) e validação |
+| `lib/storage.js` | Onde os dados ficam: pasta `data/` ou Upstash Redis |
+| `server.js` | Servidor para rodar no computador ou numa VPS |
+| `api/index.js` + `vercel.json` | Entrada e configuração para a Vercel |
 | `seed/menu.json` | Cardápio inicial (copiado para `data/` na primeira execução) |
 | `data/menu.json` | Cardápio atual, alterado pelo painel |
 | `data/backups/` | Cópia automática antes de cada salvamento (guarda as 30 últimas) |
@@ -43,8 +46,23 @@ Para desfazer um salvamento, copie um arquivo de `data/backups/` por cima de `da
 
 ## Colocar no ar
 
+### Vercel
+
+A Vercel não guarda arquivos gravados pelo site, então lá o cardápio, a senha e as fotos ficam no
+**Upstash Redis** (plano grátis).
+
+1. No projeto da Vercel: **Storage → Create Database → Upstash for Redis** e conecte ao projeto.
+   Isso cria sozinho as variáveis `KV_REST_API_URL` e `KV_REST_API_TOKEN`.
+2. Em **Settings → Environment Variables**, crie `ADMIN_PASSWORD` com a senha do painel.
+3. **Deployments → Redeploy** (variáveis novas só valem depois de um novo deploy).
+
+Sem o Redis o cardápio abre com os dados iniciais, mas o painel avisa que o banco não está configurado.
+A `ADMIN_PASSWORD` só é usada para criar a senha na primeira vez; depois, troque pelo painel.
+
+### Servidor com disco (VPS, Railway, Render, Fly.io)
+
 Qualquer serviço que rode Node e tenha **disco persistente** (senão as alterações do admin somem ao reiniciar):
-VPS com PM2, Railway com volume, Render com disco, Fly.io com volume etc.
+rode `npm start` e os dados ficam na pasta `data/`.
 
 Variáveis de ambiente:
 
@@ -52,7 +70,8 @@ Variáveis de ambiente:
 |---|---|
 | `PORT` | Porta (padrão 3000) |
 | `DATA_DIR` | Pasta dos dados; aponte para o volume persistente |
-| `ADMIN_PASSWORD` | Senha inicial, usada só se `auth.json` ainda não existir |
+| `ADMIN_PASSWORD` | Senha inicial, usada só se ainda não houver senha salva |
+| `KV_REST_API_URL` / `KV_REST_API_TOKEN` | Upstash Redis; quando presentes, os dados vão para o Redis em vez de `data/` |
 | `COOKIE_SECURE=true` | Use quando o site estiver em HTTPS |
 | `TRUST_PROXY=true` | Use atrás de proxy (Nginx, Render, Railway) para o limite de tentativas de login ver o IP real |
 

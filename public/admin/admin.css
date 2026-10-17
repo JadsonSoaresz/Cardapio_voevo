@@ -2,8 +2,8 @@
   --bg: #f4efe7;
   --card: #ffffff;
   --ink: #2f3a32;
-  --green: #3f5244;
-  --green-dark: #2f3e33;
+  --green: #00984b; /* verde do logo */
+  --green-dark: #007a3c;
   --terracotta: #a4503d;
   --danger: #b3261e;
   --muted: #6c6559;
@@ -106,7 +106,7 @@ h2 { font-size: 1.15rem; }
 }
 textarea.input { resize: vertical; min-height: 42px; }
 select.input { padding-right: 8px; }
-.input:focus { outline: none; border-color: var(--green); background: #fff; box-shadow: 0 0 0 3px rgba(63, 82, 68, 0.15); }
+.input:focus { outline: none; border-color: var(--green); background: #fff; box-shadow: 0 0 0 3px rgba(0, 152, 75, 0.18); }
 .input.is-invalid { border-color: var(--danger); box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.12); }
 
 .warning {

@@ -2,7 +2,8 @@
   --cream: #f7f0e5;
   --paper: #fffaf3;
   --ink: #2f3a32;
-  --green: #3f5244;
+  --green: #00984b; /* verde do logo */
+  --orange: #f58634; /* laranja dos corações do logo */
   --terracotta: #a4503d;
   --muted: #6c6559;
   --line: #e6dac8;
@@ -210,7 +211,7 @@ body {
 .search input:focus {
   outline: none;
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(63, 82, 68, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 152, 75, 0.18);
 }
 
 /* ---------- Categorias ---------- */
@@ -239,7 +240,7 @@ body {
   gap: 10px;
   margin: 6px auto 0;
   max-width: 220px;
-  color: var(--terracotta);
+  color: var(--orange);
   font-size: 0.9rem;
 }
 .ornament::before,

@@ -1,4 +1,7 @@
 # server.js é só para rodar localmente/VPS; na Vercel a entrada é api/index.js.
 server.js
 data/
+.env
+supabase/
+scripts/
 IMG_0940.PNG

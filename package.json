@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "set-password": "node server.js --set-password"
+    "start:env": "node --env-file=.env server.js",
+    "set-password": "node server.js --set-password",
+    "sql:supabase": "node scripts/gerar-sql-supabase.js"
   },
   "engines": {
     "node": ">=18"

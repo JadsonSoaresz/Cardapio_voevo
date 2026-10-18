@@ -27,7 +27,10 @@ Também dá para trocar pelo painel, na aba **Senha**.
 | Caminho | O que é |
 |---|---|
 | `lib/app.js` | Rotas da API (`/api/menu`, login, senha, envio de fotos) e validação |
-| `lib/storage.js` | Onde os dados ficam: pasta `data/` ou Upstash Redis |
+| `lib/storage.js` | Onde os dados ficam: Supabase, Upstash Redis ou pasta `data/` |
+| `supabase/schema.sql` | Tabelas, funções e segurança do banco no Supabase |
+| `supabase/cardapio.sql` | Estrutura + todos os itens do cardápio, pronto para colar no SQL Editor |
+| `scripts/gerar-sql-supabase.js` | Gera o `cardapio.sql` (`npm run sql:supabase`) |
 | `server.js` | Servidor para rodar no computador ou numa VPS |
 | `api/index.js` + `vercel.json` | Entrada e configuração para a Vercel |
 | `seed/menu.json` | Cardápio inicial (copiado para `data/` na primeira execução) |
@@ -46,18 +49,36 @@ Para desfazer um salvamento, copie um arquivo de `data/backups/` por cima de `da
 
 ## Colocar no ar
 
+### Banco de dados no Supabase
+
+1. No Supabase, abra **SQL Editor → New query**, cole todo o conteúdo de `supabase/cardapio.sql` e clique em
+   **Run**. Isso cria as tabelas (`categories`, `sections`, `items`, …) e insere o cardápio atual.
+   O resultado final mostra a contagem: 7 categorias, 23 seções, 92 itens.
+2. Pegue a **Project URL** e a chave **secreta** (`service_role` ou `sb_secret_…`) em **Project Settings → API**.
+3. Cadastre `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY` onde o site roda (Vercel ou `.env` local).
+
+Para exportar o cardápio editado no computador em vez do inicial:
+`npm run sql:supabase -- data/menu.json` e rode o `cardapio.sql` de novo (atualiza sem duplicar).
+
+Segurança: todas as tabelas têm RLS ligado e nenhuma política, então a chave pública (`anon`) não acessa nada.
+Só o servidor, com a chave secreta, lê e grava. Nunca coloque a chave secreta no código do navegador.
+
 ### Vercel
 
-A Vercel não guarda arquivos gravados pelo site, então lá o cardápio, a senha e as fotos ficam no
-**Upstash Redis** (plano grátis).
+A Vercel não guarda arquivos gravados pelo site, então lá os dados ficam no Supabase.
 
-1. No projeto da Vercel: **Storage → Create Database → Upstash for Redis** e conecte ao projeto.
-   Isso cria sozinho as variáveis `KV_REST_API_URL` e `KV_REST_API_TOKEN`.
-2. Em **Settings → Environment Variables**, crie `ADMIN_PASSWORD` com a senha do painel.
+1. Faça os passos do Supabase acima.
+2. Em **Settings → Environment Variables**, crie `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY`
+   (e `ADMIN_PASSWORD` quando ligar a senha do painel).
 3. **Deployments → Redeploy** (variáveis novas só valem depois de um novo deploy).
 
-Sem o Redis o cardápio abre com os dados iniciais, mas o painel avisa que o banco não está configurado.
+Sem banco configurado o cardápio abre com os dados iniciais, mas o painel avisa que não consegue salvar.
 A `ADMIN_PASSWORD` só é usada para criar a senha na primeira vez; depois, troque pelo painel.
+O Upstash Redis (`KV_REST_API_URL` / `KV_REST_API_TOKEN`) também funciona, como alternativa ao Supabase.
+
+### Supabase no computador
+
+Copie `.env.example` para `.env`, preencha e rode `npm run start:env`.
 
 ### Servidor com disco (VPS, Railway, Render, Fly.io)
 
@@ -71,7 +92,8 @@ Variáveis de ambiente:
 | `PORT` | Porta (padrão 3000) |
 | `DATA_DIR` | Pasta dos dados; aponte para o volume persistente |
 | `ADMIN_PASSWORD` | Senha inicial, usada só se ainda não houver senha salva |
-| `KV_REST_API_URL` / `KV_REST_API_TOKEN` | Upstash Redis; quando presentes, os dados vão para o Redis em vez de `data/` |
+| `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY` | Supabase; quando presentes, os dados vão para o banco em vez de `data/` |
+| `KV_REST_API_URL` / `KV_REST_API_TOKEN` | Upstash Redis (alternativa ao Supabase) |
 | `COOKIE_SECURE=true` | Use quando o site estiver em HTTPS |
 | `TRUST_PROXY=true` | Use atrás de proxy (Nginx, Render, Railway) para o limite de tentativas de login ver o IP real |
 

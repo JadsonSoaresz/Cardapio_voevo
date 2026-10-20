@@ -130,14 +130,31 @@
     return el('div', { class: 'field f-price' }, el('label', { for: id, text: 'Preço (R$)' }), input);
   }
 
-  // Reduz a foto no navegador antes de enviar: fotos de celular têm vários MB e o cardápio só precisa de ~1200px.
-  async function resizeImage(file, maxSide = 1200) {
-    let bitmap;
+  const HEIC_FILE = /\.(heic|heif)$/i;
+
+  // Abre a foto como imagem. Fotos HEIC (padrão do iPhone) só o Safari abre sozinho; nos outros
+  // navegadores o decodificador é baixado na hora (3 MB), apenas quando alguém escolhe um HEIC.
+  async function decodeImage(file, onConvert) {
     try {
-      bitmap = await createImageBitmap(file);
+      return await createImageBitmap(file);
     } catch {
-      throw new Error('Formato de imagem não suportado. Use JPG, PNG ou WebP.');
+      // Segue para a tentativa com o decodificador de HEIC.
     }
+    const { isHeic, heicTo } = await import('/admin/vendor/heic-to.js');
+    if (!HEIC_FILE.test(file.name) && !(await isHeic(file))) {
+      throw new Error('Formato de imagem não suportado. Use JPG, PNG, WebP ou HEIC.');
+    }
+    onConvert?.();
+    try {
+      return await heicTo({ blob: file, type: 'bitmap' });
+    } catch {
+      throw new Error('Não foi possível converter a foto HEIC. Tente exportá-la como JPG.');
+    }
+  }
+
+  // Reduz a foto no navegador antes de enviar: fotos de celular têm vários MB e o cardápio só precisa de ~1200px.
+  async function resizeImage(file, { maxSide = 1200, onConvert } = {}) {
+    const bitmap = await decodeImage(file, onConvert);
     const scale = Math.min(1, maxSide / Math.max(bitmap.width, bitmap.height));
     const canvas = document.createElement('canvas');
     canvas.width = Math.round(bitmap.width * scale);
@@ -153,7 +170,11 @@
   function imageField(item) {
     const preview = el('img', { class: 'thumb', alt: '' });
     const empty = el('span', { class: 'thumb thumb--empty', text: 'Sem foto' });
-    const fileInput = el('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp', hidden: true });
+    const fileInput = el('input', {
+      type: 'file',
+      accept: 'image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif',
+      hidden: true,
+    });
     const upload = el('button', { type: 'button', class: 'btn btn--small', onclick: () => fileInput.click() });
     const remove = el('button', {
       type: 'button',
@@ -181,7 +202,11 @@
       upload.disabled = true;
       upload.textContent = 'Enviando…';
       try {
-        const { url } = await api('/api/upload', { method: 'POST', body: await resizeImage(file) });
+        const image = await resizeImage(file, {
+          onConvert: () => { upload.textContent = 'Convertendo HEIC…'; },
+        });
+        upload.textContent = 'Enviando…';
+        const { url } = await api('/api/upload', { method: 'POST', body: image });
         item.image = url;
         markDirty();
         toast('Foto enviada. Clique em “Salvar alterações” para publicar.');

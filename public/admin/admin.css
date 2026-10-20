@@ -314,7 +314,7 @@ details[open] > .sec__summary::before { transform: rotate(90deg); }
   width: 72px;
   height: 72px;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
   background: var(--input);
 }
 

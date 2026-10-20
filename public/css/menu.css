@@ -350,7 +350,8 @@ body {
   width: 96px;
   height: 96px;
   border-radius: 12px;
-  object-fit: cover;
+  /* contain: mostra a foto inteira, sem recortar; o fundo preenche as sobras. */
+  object-fit: contain;
   background: var(--note);
 }
 
@@ -499,8 +500,9 @@ html.is-locked { overflow: hidden; }
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  /* Mantém as proporções da foto; fotos em pé ficam limitadas à altura da tela. */
+  max-height: 65dvh;
+  object-fit: contain;
   background: var(--note);
 }
 
